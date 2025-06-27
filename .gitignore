@@ -1,0 +1,7 @@
+venv/
+assets/
+old_stuff/
+__pycache__/
+*.vbs
+*.bat
+*.ini
