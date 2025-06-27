@@ -112,5 +112,37 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 
 ## Authors
 
-Haider Rizvi - [GitHub](https://github.com/hr080100)
-Rajeev Prasad - [GitHub](https://github.com/oliverraj)
+- Haider Rizvi - [GitHub](https://github.com/hr080100)
+- Rajeev Prasad - [GitHub](https://github.com/oliverraj)
+
+---
+
+## Data Availability & Replication
+
+**Note:** The `assets/` folder containing raw and processed data is **not included** in this repository due to size and LFS limitations.
+
+### How to Replicate the Dataset
+
+1. **Download Raw Data:**
+   - Obtain the raw count matrices, gene/barcode tables, and metadata for GSE176078 from the [GEO database](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE176078) or the original publication's supplementary materials.
+   - Required files typically include:
+     - `count_matrix_sparse.mtx`
+     - `count_matrix_genes.tsv`
+     - `count_matrix_barcodes.tsv`
+     - `metadata.csv`
+
+2. **Directory Structure:**
+   - Create the following folder structure in your project root:
+     ```
+     assets/
+       └── GSE176078/
+           ├── count_matrix_sparse.mtx
+           ├── count_matrix_genes.tsv
+           ├── count_matrix_barcodes.tsv
+           └── metadata.csv
+     ```
+   - Place the downloaded files in the `assets/GSE176078/` directory.
+
+3. **Gene Annotation File:**
+   - The GTF annotation file (`gencode.v44.annotation.gtf.gz`) will be downloaded automatically by the notebook if not present.
+   - Alternatively, you can manually download it from [GENCODE](https://www.gencodegenes.org/human/) and place it in the project root or `assets/`.

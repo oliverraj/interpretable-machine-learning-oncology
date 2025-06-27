@@ -1,7 +1,14 @@
 venv/
-assets/
 old_stuff/
 __pycache__/
+GSE161529_RAW/
+GSE176078/
 *.vbs
 *.bat
 *.ini
+*.csv
+*.pkl
+*.gz
+*.tar
+*.tsv
+*.mtx
