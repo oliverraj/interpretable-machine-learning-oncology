@@ -1,9 +1,9 @@
 venv/
-old_stuff/
 __pycache__/
-Notebook 28June/
-GSE161529_RAW/
+assets/
+GSE161529/
 GSE176078/
+GSE180286/
 *.vbs
 *.bat
 *.ini
