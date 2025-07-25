@@ -46,11 +46,11 @@ def delete_file_or_dir(path: Path):
         print(f"Path does not exist: {path}")
 
 
-def gse180286_asset_main():
-    url = "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE180286&format=file"
+def gse161529_asset_main():
+    url = "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE161529&format=file"
     dest_dir = Path("assets/")
-    tar_path = dest_dir / "GSE180286_RAW.tar"
-    tar_dest_dir = dest_dir / "GSE180286"
+    tar_path = dest_dir / "GSE161529_RAW.tar"
+    tar_dest_dir = dest_dir / "GSE161529"
 
     # Download and extract
     download_tar_file(url, tar_path)
@@ -64,4 +64,4 @@ def gse180286_asset_main():
 
 
 if __name__ == "__main__":
-    gse180286_asset_main()
+    gse161529_asset_main()
