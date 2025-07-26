@@ -10,18 +10,30 @@ This project analyzes single-cell and spatial transcriptomics data from human br
 ghost-cell-busters/
 │
 ├── assets/
-│   ├── adata_obs_full.csv
-│   ├── adata_obs_with_pseudotime.csv
-│   ├── adata_sub.pkl
-│   ├── adata.pkl
-│   ├── gencode.v44.annotation.gtf.gz
-│   ├── GSE161529_features.tsv.gz
-│   ├── GSE161529_RAW/
-│   └── GSE176078/
+│   ├── GSE161529/
+│   ├── GSE176078/
+│   ├── GSE180286/
+│   └── Gencode/
 │
-└── notebooks/
-    ├── Ghost_Cell_Load_Explore.ipynb
-    └── GSE176078.ipynb
+├── notebooks/
+│   ├── 01. GSE176078.ipynb
+│   ├── 02. GSE176078_model.ipynb
+│   ├── 03. GSE161529_validation.ipynb
+│   ├── 04. GSE161529_cross_validation.ipynb
+│   ├── 05. GSE161529_oncogene.ipynb
+│   ├── 06. GSE180286_validation.ipynb
+│   ├── 07. GSE180286_cross_validation.ipynb
+│   └── 08. GSE180286_oncogene.ipynb
+│
+├── scripts/
+│   ├── Gencode_asset.py
+│   ├── GSE161529_asset.py
+│   ├── GSE176078_asset.py
+│   ├── GSE180286_asset.py
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 ---
