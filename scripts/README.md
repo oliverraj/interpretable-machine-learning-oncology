@@ -12,12 +12,7 @@ Each script in this directory is designed to:
 
 ## Usage
 
-1. Ensure you have Python 3.11 or above installed.
-2. Install required dependencies from `requirements.txt`:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Run the desired script to download and prepare a dataset:
+- Run the desired script to download and prepare a dataset:
     ```bash
     python GSE176078_asset.py
     ```
