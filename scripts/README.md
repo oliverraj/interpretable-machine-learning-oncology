@@ -19,5 +19,17 @@ Each script in this directory is designed to:
     ```
 3. Run the desired script to download and prepare a dataset:
     ```bash
-    python script_name.py
+    python GSE176078_asset.py
+    ```
+
+    ```bash
+    python GSE161529_asset.py
+    ```
+
+    ```bash
+    python GSE180286_asset.py
+    ```
+
+    ```bash
+    python Gencode_asset.py
     ```
