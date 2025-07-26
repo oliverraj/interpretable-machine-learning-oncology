@@ -67,8 +67,6 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 
 ### 3. Data Preparation
 
-### 3. Data Preparation
-
 - Use the scripts in the `scripts/` folder to help organize and prepare your data:
   - For each dataset, run the corresponding script to download or process files as needed. For example:
     ```sh
@@ -139,7 +137,5 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 - Rajeev Prasad - [GitHub](https://github.com/oliverraj)
 
 ---
-
-## Data Availability & Replication
 
 **Note:** The `assets/` folder containing raw and processed data is **not included** in this repository due to size and LFS limitations.
