@@ -40,6 +40,11 @@ ghost-cell-busters/
 
 ## Setup Instructions
 
+### 0. Prerequisites
+
+Ensure Python 3.11.9 or above is installed.
+Ensure git is installed.
+
 ### 1. Clone the Repository
 
 ```sh
