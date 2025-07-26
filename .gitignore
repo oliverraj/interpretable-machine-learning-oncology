@@ -1,9 +1,6 @@
 venv/
 __pycache__/
-assets/
-GSE161529/
-GSE176078/
-GSE180286/
+assets_original/
 *.vbs
 *.bat
 *.ini
@@ -13,3 +10,4 @@ GSE180286/
 *.tar
 *.tsv
 *.mtx
+*.txt
