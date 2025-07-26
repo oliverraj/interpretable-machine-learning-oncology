@@ -11,3 +11,4 @@ assets_original/
 *.tsv
 *.mtx
 *.txt
+*.gtf
