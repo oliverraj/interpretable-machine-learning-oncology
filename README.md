@@ -82,7 +82,7 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 
 ### 4. Running the Analysis
 
-- Open `notebooks/GSE176078.ipynb` in Jupyter or VS Code.
+- Open `notebooks/01. GSE176078.ipynb` and `notebooks/02. GSE176078_model.ipynb` in Jupyter or VS Code.
 - Execute cells sequentially to:
   - Load and preprocess data
   - Engineer features (cell cycle, apoptosis, ribosomal, OXPHOS, CNV scores)
@@ -90,6 +90,7 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
   - Visualize and analyze results
   - Run machine learning and interpret with SHAP
   - Perform pseudotime and gene set enrichment analyses
+- Repeat for other notebooks as needed.
 
 ---
 
