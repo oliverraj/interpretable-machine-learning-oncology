@@ -16,14 +16,14 @@ ghost-cell-busters/
 │   └── Gencode/
 │
 ├── notebooks/
-│   ├── 01. GSE176078.ipynb
-│   ├── 02. GSE176078_model.ipynb
-│   ├── 03. GSE161529_validation.ipynb
-│   ├── 04. GSE161529_cross_validation.ipynb
-│   ├── 05. GSE161529_oncogene.ipynb
-│   ├── 06. GSE180286_validation.ipynb
-│   ├── 07. GSE180286_cross_validation.ipynb
-│   └── 08. GSE180286_oncogene.ipynb
+│   ├── 01_GSE176078.ipynb
+│   ├── 02_GSE176078_model.ipynb
+│   ├── 03_GSE161529_validation.ipynb
+│   ├── 04_GSE161529_cross_validation.ipynb
+│   ├── 05_GSE161529_oncogene.ipynb
+│   ├── 06_GSE180286_validation.ipynb
+│   ├── 07_GSE180286_cross_validation.ipynb
+│   └── 08_GSE180286_oncogene.ipynb
 │
 ├── scripts/
 │   ├── Gencode_asset.py
@@ -82,7 +82,7 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 
 ### 4. Running the Analysis
 
-- Open `notebooks/01. GSE176078.ipynb` and `notebooks/02. GSE176078_model.ipynb` in Jupyter or VS Code.
+- Open `notebooks/01_GSE176078.ipynb` and `notebooks/02_GSE176078_model.ipynb` in Jupyter or VS Code.
 - Execute cells sequentially to:
   - Load and preprocess data
   - Engineer features (cell cycle, apoptosis, ribosomal, OXPHOS, CNV scores)
