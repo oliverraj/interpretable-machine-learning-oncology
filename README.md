@@ -40,19 +40,19 @@ ghost-cell-busters/
 
 ## Setup Instructions
 
-### 0. Prerequisites
+### 1. Prerequisites
 
-Ensure Python 3.11.9 or above is installed.
-Ensure git is installed.
+- Ensure Python 3.11.9 or above is installed.
+- Ensure git is installed.
 
-### 1. Clone the Repository
+### 2. Clone the Repository
 
 ```sh
 git clone <repo-url>
 cd ghost-cell-busters
 ```
 
-### 2. Install Dependencies
+### 3. Install Dependencies
 
 Recommended: Use a virtual environment.
 
@@ -70,7 +70,7 @@ If `requirements.txt` is missing, install these packages:
 pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene infercnvpy shap xgboost imbalanced-learn gtfparse
 ```
 
-### 3. Data Preparation
+### 4. Data Preparation
 
 - Use the scripts in the `scripts/` folder to help organize and prepare your data:
   - For each dataset, run the corresponding script to download or process files as needed. For example:
@@ -85,7 +85,7 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
     ```
     This will download the GTF annotation file (`gencode.v44.annotation.gtf.gz`) if not already present.
 
-### 4. Running the Analysis
+### 5. Running the Analysis
 
 - Open `notebooks/01_GSE176078.ipynb` and `notebooks/02_GSE176078_model.ipynb` in Jupyter or VS Code.
 - Execute cells sequentially to:
