@@ -14,17 +14,17 @@ Each script in this directory is designed to:
 
 - Run the desired script to download and prepare a dataset:
     ```bash
-    python GSE176078_asset.py
+    python scripts/GSE176078_asset.py
     ```
 
     ```bash
-    python GSE161529_asset.py
+    python scripts/GSE161529_asset.py
     ```
 
     ```bash
-    python GSE180286_asset.py
+    python scripts/GSE180286_asset.py
     ```
 
     ```bash
-    python Gencode_asset.py
+    python scripts/Gencode_asset.py
     ```
