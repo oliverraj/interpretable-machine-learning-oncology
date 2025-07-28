@@ -5,15 +5,27 @@ This project analyzes single-cell and spatial transcriptomics data from human br
 ---
 
 ## Folder Structure
+The repository is organized in the following manner where the details inside brackets it is not included in the repository, to avoid size and LFS limitations. When you clone the repository please follow the instructions in the README to set up the environment and download the data files and place them in the appropriate directories.
 
 ```
 ghost-cell-busters/
 │
 ├── assets/
+│   ├── Gencode/
+│   │   ├── (extracted GTF files)
+│   │   └── README.md
+│   │
 │   ├── GSE161529/
+│   │   ├── (extracted data files)
+│   │   └── README.md
+│   │
 │   ├── GSE176078/
-│   ├── GSE180286/
-│   └── Gencode/
+│   │   ├── (extracted data files)
+│   │   └── README.md
+│   │
+│   └── GSE180286/
+│       ├── (extracted data files)
+│       └── README.md
 │
 ├── notebooks/
 │   ├── 01_GSE176078.ipynb
@@ -23,17 +35,23 @@ ghost-cell-busters/
 │   ├── 05_GSE161529_oncogene.ipynb
 │   ├── 06_GSE180286_validation.ipynb
 │   ├── 07_GSE180286_cross_validation.ipynb
-│   └── 08_GSE180286_oncogene.ipynb
+│   ├── 08_GSE180286_oncogene.ipynb
+│   ├── 09_combined_DE_final_24July.ipynb
+│   └── README.md
 │
 ├── scripts/
 │   ├── Gencode_asset.py
 │   ├── GSE161529_asset.py
 │   ├── GSE176078_asset.py
-│   └── GSE180286_asset.py
+│   ├── GSE180286_asset.py
+│   └── README.md
 │
-├── requirements.txt
+├── (venv)/
+│   └── (virtual environment files)
+│
+├── .gitignore
 ├── README.md
-└── .gitignore
+└── requirements.txt
 ```
 
 ---
