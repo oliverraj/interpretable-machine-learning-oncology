@@ -1,4 +1,4 @@
-# Dissecting Tumor and Normal Cell Identities in Breast Cancer at Single-Cell Resolution
+# Precision Oncology through Interpretable Machine Learning: Dissecting Tumor vs. Normal Cell Signatures
 
 This project analyzes single-cell and spatial transcriptomics data from human breast cancers, focusing on the identification and characterization of "ghost cells"—cells with abnormal transcriptomic or genomic features. The workflow includes data loading, feature engineering, ghost cell classification, CNV analysis, machine learning, and gene set enrichment.
 
