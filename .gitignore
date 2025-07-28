@@ -1,6 +1,5 @@
 venv/
 __pycache__/
-assets_original/
 *.vbs
 *.bat
 *.ini
