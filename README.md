@@ -48,7 +48,7 @@ ghost-cell-busters/
 ### 2. Clone the Repository
 
 ```sh
-git clone <repo-url>
+git clone "https://github.com/mads-capstone-team24-summer-2025/ghost-cell-busters.git"
 cd ghost-cell-busters
 ```
 
@@ -57,7 +57,10 @@ cd ghost-cell-busters
 Recommended: Use a virtual environment.
 
 ```sh
-python -m venv venv
+python -m venv venv  # On Windows
+python3 -m venv venv  # On Mac/Linux
+
+# Activate the virtual environment
 venv\Scripts\activate  # On Windows
 source venv/bin/activate  # On Mac/Linux
 
