@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Cell Busters: Precision Oncology through Interpretable Machine Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; color: #222; }
+        h1, h2, h3 { color: #2c3e50; }
+        pre, code { background: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+        .folder-structure { background: #fff; border: 1px solid #ddd; padding: 1em; margin-bottom: 2em; }
+        .section { margin-bottom: 2em; }
+        ul { margin-top: 0.5em; }
+        .authors a { color: #2980b9; text-decoration: none; }
+        .authors a:hover { text-decoration: underline; }
+        .references a { color: #2980b9; }
+        .note { background: #fffbe6; border-left: 4px solid #ffe066; padding: 1em; margin: 1em 0; }
+    </style>
+</head>
+<body>
+    <h1>Precision Oncology through Interpretable Machine Learning: Dissecting Tumor vs. Normal Cell Signatures</h1>
+    <p>
+        This project analyzes single-cell and spatial transcriptomics data from human breast cancers, focusing on the identification and characterization of <b>ghost cells</b>—cells with abnormal transcriptomic or genomic features. The workflow includes data loading, feature engineering, ghost cell classification, CNV analysis, machine learning, and gene set enrichment.
+    </p>
+    <hr>
+
+    <div class="section">
+        <h2>Folder Structure</h2>
+        <div class="folder-structure">
+<pre>
+ghost-cell-busters/
+│
+├── assets/
+│   ├── Gencode/
+│   │   ├── (extracted GTF files)
+│   │   └── README.md
+│   ├── GSE161529/
+│   │   ├── (extracted data files)
+│   │   └── README.md
+│   ├── GSE176078/
+│   │   ├── (extracted data files)
+│   │   └── README.md
+│   └── GSE180286/
+│       ├── (extracted data files)
+│       └── README.md
+│
+├── notebooks/
+│   ├── 01_GSE176078.ipynb
+│   ├── 02_GSE176078_model.ipynb
+│   ├── 03_GSE161529_validation.ipynb
+│   ├── 04_GSE161529_cross_validation.ipynb
+│   ├── 05_GSE161529_oncogene.ipynb
+│   ├── 06_GSE180286_validation.ipynb
+│   ├── 07_GSE180286_cross_validation.ipynb
+│   ├── 08_GSE180286_oncogene.ipynb
+│   ├── 09_combined_DE_final_24July.ipynb
+│   └── README.md
+│
+├── scripts/
+│   ├── Gencode_asset.py
+│   ├── GSE161529_asset.py
+│   ├── GSE176078_asset.py
+│   ├── GSE180286_asset.py
+│   └── README.md
+│
+├── (venv)/
+│   └── (virtual environment files)
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
+</pre>
+        </div>
+        <div class="note">
+            <b>Note:</b> The <code>assets/</code> folder containing raw and processed data is <b>not included</b> in this repository due to size and LFS limitations.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Setup Instructions</h2>
+        <ol>
+            <li>
+                <b>Prerequisites:</b>
+                <ul>
+                    <li>Python 3.11.9 or above</li>
+                    <li>git</li>
+                </ul>
+            </li>
+            <li>
+                <b>Clone the Repository:</b>
+                <pre>git clone "https://github.com/mads-capstone-team24-summer-2025/ghost-cell-busters.git"
+cd ghost-cell-busters</pre>
+            </li>
+            <li>
+                <b>Install Dependencies:</b>
+                <pre>
+python -m venv venv  # On Windows
+python3 -m venv venv  # On Mac/Linux
+
+# Activate the virtual environment
+venv\Scripts\activate  # On Windows
+source venv/bin/activate  # On Mac/Linux
+
+pip install -r requirements.txt
+                </pre>
+                <p>If <code>requirements.txt</code> is missing, install these packages:</p>
+                <pre>
+pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene infercnvpy shap xgboost imbalanced-learn gtfparse
+                </pre>
+            </li>
+            <li>
+                <b>Data Preparation:</b>
+                <ul>
+                    <li>Use the scripts in the <code>scripts/</code> folder to help organize and prepare your data:</li>
+                </ul>
+                <pre>
+python scripts/GSE176078_asset.py
+python scripts/GSE161529_asset.py
+python scripts/GSE180286_asset.py
+python scripts/Gencode_asset.py
+                </pre>
+                <p>
+                    These scripts will help set up the <code>assets/</code> directories with required files.
+                </p>
+            </li>
+            <li>
+                <b>Running the Analysis:</b>
+                <ul>
+                    <li>Open <code>notebooks/01_GSE176078.ipynb</code> and <code>notebooks/02_GSE176078_model.ipynb</code> in Jupyter or VS Code.</li>
+                    <li>Execute cells sequentially to:
+                        <ul>
+                            <li>Load and preprocess data</li>
+                            <li>Engineer features (cell cycle, apoptosis, ribosomal, OXPHOS, CNV scores)</li>
+                            <li>Classify ghost cells</li>
+                            <li>Visualize and analyze results</li>
+                            <li>Run machine learning and interpret with SHAP</li>
+                            <li>Perform pseudotime and gene set enrichment analyses</li>
+                        </ul>
+                    </li>
+                    <li>Repeat for other notebooks as needed.</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Main Analysis Steps</h2>
+        <ol>
+            <li><b>Data Loading:</b> Build AnnData object from raw files.</li>
+            <li><b>Feature Engineering:</b> Compute cell cycle, apoptosis, ribosomal, OXPHOS, and CNV features.</li>
+            <li><b>Ghost Cell Classification:</b> Define and refine ghost cell criteria.</li>
+            <li><b>Visualization:</b> Plot distributions and proportions by subtype and cell type.</li>
+            <li><b>Differential Expression:</b> Identify genes distinguishing ghost vs. non-ghost cells.</li>
+            <li><b>CNV Analysis:</b> Annotate genes, run inferCNV, and score CNV burden.</li>
+            <li><b>Machine Learning:</b> Train classifiers to predict ghost cells and tumor/normal status; interpret with SHAP.</li>
+            <li><b>Pseudotime Analysis:</b> Compute and visualize pseudotime trajectories.</li>
+            <li><b>Gene Set Enrichment:</b> Score MSigDB Hallmark gene sets.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Outputs</h2>
+        <ul>
+            <li>Processed AnnData objects (<code>*.pkl</code>)</li>
+            <li>Feature tables (<code>*.csv</code>)</li>
+            <li>Plots and figures (generated by running the notebooks)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Notes</h2>
+        <ul>
+            <li>The project uses both Python scripts and IPython notebooks.</li>
+            <li>Some steps require substantial memory and compute (especially CNV and machine learning).</li>
+        </ul>
+    </div>
+
+    <div class="section references">
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://scanpy.readthedocs.io/" target="_blank">Scanpy documentation</a></li>
+            <li><a href="https://icbi-lab.github.io/infercnvpy/" target="_blank">infercnvpy documentation</a></li>
+            <li><a href="https://www.gsea-msigdb.org/gsea/msigdb/collections.jsp#H" target="_blank">MSigDB Hallmark gene sets</a></li>
+            <li><a href="https://www.gencodegenes.org/human/" target="_blank">Gencode GTF files</a></li>
+        </ul>
+    </div>
+
+    <div class="section authors">
+        <h2>Authors</h2>
+        <ul>
+            <li>Haider Rizvi - <a href="https://github.com/hr080100" target="_blank">GitHub</a></li>
+            <li>Rajeev Prasad - <a href="https://github.com/oliverraj" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
+</body>
+</html>
