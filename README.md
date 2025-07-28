@@ -5,7 +5,7 @@ This project analyzes single-cell and spatial transcriptomics data from human br
 ---
 
 ## Folder Structure
-The repository is organized in the following manner where the details inside brackets it is not included in the repository, to avoid size and LFS limitations. When you clone the repository please follow the instructions in the README to set up the environment and download the data files and place them in the appropriate directories.
+The repository is organized in the following manner where the details inside brackets is not included in the repository, to avoid size and LFS limitations. When you clone the repository please follow the instructions in the README to set up the environment and download the data files and place them in the appropriate directories.
 
 ```
 ghost-cell-busters/
