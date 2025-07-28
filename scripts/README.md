@@ -12,7 +12,8 @@ Each script in this directory is designed to:
 
 ## Usage
 
-- Run the desired script to download and prepare a dataset:
+- Run the desired script to download and prepare a dataset (If your terminal or command line is in the ghost-cell-busters folder please run the commands below, but if you have navigated to the scripts folder, you can run the commands without the `scripts/` prefix):
+
     ```bash
     python scripts/GSE176078_asset.py
     ```
