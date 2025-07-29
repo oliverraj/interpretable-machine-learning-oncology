@@ -30,13 +30,14 @@ ghost-cell-busters/
 ├── notebooks/
 │   ├── 01_GSE176078.ipynb
 │   ├── 02_GSE176078_model.ipynb
-│   ├── 03_GSE161529_validation.ipynb
-│   ├── 04_GSE161529_cross_validation.ipynb
-│   ├── 05_GSE161529_oncogene.ipynb
-│   ├── 06_GSE180286_validation.ipynb
-│   ├── 07_GSE180286_cross_validation.ipynb
-│   ├── 08_GSE180286_oncogene.ipynb
-│   ├── 09_combined_DE_final_24July.ipynb
+│   ├── 03_GSE176078_shap.ipynb
+│   ├── 04_GSE161529_validation.ipynb
+│   ├── 05_GSE161529_cross_validation.ipynb
+│   ├── 06_GSE161529_oncogene.ipynb
+│   ├── 07_GSE180286_validation.ipynb
+│   ├── 08_GSE180286_cross_validation.ipynb
+│   ├── 09_GSE180286_oncogene.ipynb
+│   ├── 10_combined_DE_final_24July.ipynb
 │   └── README.md
 │
 ├── scripts/
