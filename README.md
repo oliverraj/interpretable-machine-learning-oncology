@@ -37,7 +37,7 @@ ghost-cell-busters/
 │   ├── 07_GSE180286_validation.ipynb
 │   ├── 08_GSE180286_cross_validation.ipynb
 │   ├── 09_GSE180286_oncogene.ipynb
-│   ├── 10_combined_DE_final_24July.ipynb
+│   ├── 10_Combined_DE.ipynb
 │   └── README.md
 │
 ├── scripts/
