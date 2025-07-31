@@ -1,4 +1,4 @@
-# Precision Oncology through Interpretable Machine Learning : Tumor and Normal Cell Signatures from Single-Cell Data
+# Precision Oncology through Interpretable Machine Learning : Tumor vs. Normal Cell Signatures from Single-Cell Data
 
 This project analyzes single-cell and spatial transcriptomics data from human breast cancers, focusing on distinguishing tumor and normal cell populations through comprehensive computational methods. The workflow includes data acquisition, feature engineering, copy number variation analysis, machine learning classification, and integration of therapeutic target information using DGIdb and Open Targets databases to identify clinically relevant gene targets for precision oncology.
 
