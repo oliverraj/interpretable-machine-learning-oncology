@@ -112,10 +112,11 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 
 - Open `notebooks/01_GSE176078.ipynb` and `notebooks/02_GSE176078_model.ipynb` in Jupyter or VS Code.
 - Execute cells sequentially to:
-  - Load and preprocess data
-  - Engineer features (cell cycle, apoptosis, ribosomal, OXPHOS, CNV scores)
-  - Visualize and analyze results
-  - Run machine learning and interpret with SHAP
+  - Load and preprocess single-cell transcriptomics data
+  - Engineer relevant features including cell cycle, apoptosis, ribosomal content, OXPHOS, and CNV scores
+  - Classify tumor versus normal cells based on transcriptomic signatures
+  - Visualize and explore classification results
+  - Train machine learning models and interpret feature importance using SHAP values
 - Repeat for other notebooks as needed.
 
 ---
