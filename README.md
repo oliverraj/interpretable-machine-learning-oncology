@@ -1,4 +1,4 @@
-# Precision Oncology through Interpretable Machine Learning on Single-Cell Data: Tumor vs. Normal Cell Signatures for Therapeutic Discovery
+# Precision Oncology through Interpretable Machine Learning : Tumor and Normal Cell Signatures from Single-Cell Data
 
 This project analyzes single-cell and spatial transcriptomics data from human breast cancers, focusing on the identification and characterization of "ghost cells"—cells with abnormal transcriptomic or genomic features. The workflow includes data loading, feature engineering, ghost cell classification, CNV analysis, machine learning, and gene set enrichment.
 
