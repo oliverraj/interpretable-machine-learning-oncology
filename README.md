@@ -114,10 +114,8 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 - Execute cells sequentially to:
   - Load and preprocess data
   - Engineer features (cell cycle, apoptosis, ribosomal, OXPHOS, CNV scores)
-  - Classify ghost cells
   - Visualize and analyze results
   - Run machine learning and interpret with SHAP
-  - Perform pseudotime and gene set enrichment analyses
 - Repeat for other notebooks as needed.
 
 ---
@@ -126,13 +124,10 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 
 1. **Data Loading:** Build AnnData object from raw files.
 2. **Feature Engineering:** Compute cell cycle, apoptosis, ribosomal, OXPHOS, and CNV features.
-3. **Ghost Cell Classification:** Define and refine ghost cell criteria.
-4. **Visualization:** Plot distributions and proportions by subtype and cell type.
-5. **Differential Expression:** Identify genes distinguishing ghost vs. non-ghost cells.
-6. **CNV Analysis:** Annotate genes, run inferCNV, and score CNV burden.
-7. **Machine Learning:** Train classifiers to predict ghost cells and tumor/normal status; interpret with SHAP.
-8. **Pseudotime Analysis:** Compute and visualize pseudotime trajectories.
-9. **Gene Set Enrichment:** Score MSigDB Hallmark gene sets.
+3. **Visualization:** Plot distributions and proportions by subtype and cell type.
+4. **CNV Analysis:** Annotate genes, run inferCNV, and score CNV burden.
+5. **Machine Learning:** Train classifiers to predict ghost cells and tumor/normal status; interpret with SHAP.
+6. **Gene Set Enrichment:** Score MSigDB Hallmark gene sets.
 
 ---
 
