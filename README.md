@@ -126,7 +126,7 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 2. **Feature Engineering:** Compute cell cycle, apoptosis, ribosomal, OXPHOS, and CNV features.
 3. **Visualization:** Plot distributions and proportions by subtype and cell type.
 4. **CNV Analysis:** Annotate genes, run inferCNV, and score CNV burden.
-5. **Machine Learning:** Train classifiers to predict ghost cells and tumor/normal status; interpret with SHAP.
+5. **Machine Learning:** Train classifiers to predict tumor/normal status; interpret with SHAP.
 6. **Gene Set Enrichment:** Score MSigDB Hallmark gene sets.
 
 ---
