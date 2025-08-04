@@ -1,195 +1,52 @@
-# Ghost Cell Busters: A Comprehensive Analysis of Machine Learning for Tumor Cell Identification
+# Notebooks
 
-## Executive Summary
+This folder contains Jupyter notebooks related to the Ghost Cell Busters project. The notebooks are organized to facilitate exploration, experimentation, and documentation of the project's data analysis, modeling, and results.
 
-The "Ghost Cell Busters" project represents a sophisticated computational biology effort focused on developing robust machine learning models to accurately identify tumor cells from single-cell RNA sequencing (scRNA-seq) data. The project systematically analyzes three distinct cancer datasets (GSE176078, GSE161529, and GSE180286) to create and validate predictive models for distinguishing tumor cells from normal cells. Beyond simple classification, the work examines oncogene expression patterns, pathway analysis, and potential therapeutic targets, providing multidimensional insights into cancer biology.
+## Structure
 
-## Project Overview and Objectives
+### Data Processing and Feature Engineering
+- **01_GSE176078.ipynb**  
+   Initial data loading, preprocessing, and feature engineering for the GSE176078 training dataset.
 
-The project employs a methodical approach to developing tumor cell classifiers that can generalize across multiple datasets. The key objectives include:
+- **04_GSE161529_obs.ipynb**  
+   Data processing and observation file generation for the GSE161529 validation dataset.
 
-1. Building machine learning models for tumor cell classification using GSE176078 as the training dataset
-2. Validating and cross-applying these models on independent datasets (GSE161529 and GSE180286)
-3. Analyzing differential gene expression between predicted tumor and normal cells
-4. Examining oncogene activation patterns and relevant signaling pathways
-5. Identifying potential therapeutic targets through network biology approaches
-6. Correlating tumor predictions with genomic instability measures like CNV scores
+- **07_GSE180286_obs.ipynb**  
+   Data processing and observation file generation for the GSE180286 validation dataset.
 
-## Dataset Description
+### Model Development and Interpretation
+- **02_GSE176078_model.ipynb**  
+   XGBoost model training, validation, and performance evaluation using GSE176078 dataset.
 
-The project utilizes three primary datasets from the Gene Expression Omnibus (GEO):
+- **03_GSE176078_shap.ipynb**  
+   SHAP analysis for model interpretability and feature importance visualization.
 
-1. **GSE176078**: Used as the training dataset for model development, contains scRNA-seq data with labeled tumor and normal cells
-2. **GSE161529**: A breast cancer dataset containing numerous samples spanning normal tissue, primary tumors, and metastatic tissue
-3. **GSE180286**: Another cancer dataset used for model validation and oncogene analysis
+### Cross-Dataset Validation
+- **05_GSE161529_cross_validation.ipynb**  
+   Cross-validation of trained model on GSE161529 dataset with tumor prediction generation.
 
-Each dataset is thoroughly processed with quality control measures, normalization steps, and feature extraction to prepare for machine learning applications and downstream analyses.
+- **08_GSE180286_cross_validation.ipynb**  
+   Cross-validation of trained model on GSE180286 dataset with tumor prediction generation.
 
-## Methodology
+### Biological Analysis
+- **06_GSE161529_oncogene.ipynb**  
+   Oncogene expression analysis, differential expression testing, and pathway visualization for GSE161529.
 
-### Data Preprocessing and Feature Engineering
+- **09_GSE180286_oncogene.ipynb**  
+   Oncogene expression analysis, differential expression testing, and pathway visualization for GSE180286.
 
-The preprocessing workflow follows a consistent pattern across all three datasets:
+### Comparative Analysis
+- **10_Combined_DE.ipynb**  
+   Combined differential expression analysis across datasets with drug target identification and clinical relevance assessment.
 
-1. Loading raw scRNA-seq data and associated metadata
-2. Quality control filtering including cell count normalization and mitochondrial gene percentage assessment
-3. Feature extraction including cell cycle scoring and CNV (Copy Number Variation) score calculation
-4. Creation of observation files (.obs) containing cell-level metadata
-5. Gene symbol annotation using MyGene.info to standardize gene identifiers
+## Usage
 
-The data preparation meticulously handles technical challenges such as batch effects, cell quality filtering, and gene annotation to ensure reliable downstream analysis.
+1. Clone the repository and navigate to this folder.
+2. Open notebooks using JupyterLab or Jupyter Notebook.
+3. Follow the instructions in each notebook for reproducibility.
 
-### Machine Learning Model Development
+## Notes
 
-The project develops XGBoost-based models for tumor cell classification:
-
-1. **Model Training (GSE176078)**: The primary classifier is trained using features including gene expression patterns, cell cycle scores, mitochondrial content, and other cellular characteristics. 
-
-2. **Model Evaluation**: Comprehensive evaluation using precision, recall, F1-score, and ROC-AUC metrics demonstrates strong performance (over 95% weighted average F1-score).
-
-3. **Model Interpretation**: SHAP (SHapley Additive exPlanations) analysis provides feature importance insights, revealing that both gene expression patterns and cell cycle metrics contribute significantly to tumor cell classification.
-
-4. **Cross-validation**: The model undergoes rigorous k-fold cross-validation to ensure robustness and generalizability.
-
-### Model Application and Validation
-
-The models are subsequently applied to independent datasets:
-
-1. **Cross-dataset Validation**: The trained model from GSE176078 is applied to GSE161529 and GSE180286 to test generalizability.
-
-2. **Threshold Optimization**: Classification thresholds are fine-tuned to balance sensitivity and specificity across different datasets.
-
-3. **Orthogonal Validation**: CNV scores serve as an independent validation measure, with statistical tests confirming significantly higher CNV scores in predicted tumor cells.
-
-### Oncogene Expression Analysis
-
-Extensive analysis of oncogene expression patterns includes:
-
-1. **Differential Expression**: Statistical comparison of expression levels between predicted tumor and normal cells using t-tests and Mann-Whitney U tests.
-
-2. **Visualization**: Heatmaps, violin plots, and UMAPs illustrate expression differences across cell populations.
-
-3. **Log2 Fold Change Calculation**: Quantification of expression differences for key oncogenes and tumor suppressors.
-
-### Pathway and Network Analysis
-
-The project applies sophisticated network biology approaches:
-
-1. **Pathway Enrichment**: GSEA (Gene Set Enrichment Analysis) identifies significantly enriched pathways in tumor cells.
-
-2. **Network Visualization**: NetworkX-based visualization illustrates activation patterns in key oncogenic pathways including PI3K–MAPK–EGFR, CDK4–CDK6–CCND1, and MYC signaling axes.
-
-3. **Druggable Target Identification**: Integration with known drug targets provides therapeutic context to the network analysis.
-
-## Key Findings
-
-### Model Performance and Validation
-
-The tumor cell classification models demonstrate strong performance metrics:
-
-1. The primary XGBoost classifier achieves approximately 89% accuracy with a 94% F1-score for tumor cell detection in the GSE176078 dataset.
-
-2. Cross-validation confirms the model's stability across different data partitions.
-
-3. Application to independent datasets shows the model successfully generalizes to new data sources.
-
-4. CNV score analysis provides orthogonal validation of tumor predictions, with predicted tumor cells showing significantly higher CNV scores (p-value < 0.001), consistent with genomic instability as a hallmark of cancer.
-
-### Oncogene Expression Patterns
-
-The analysis reveals distinct expression patterns in predicted tumor cells:
-
-1. **Highly Expressed Oncogenes**: Several key oncogenes show significant upregulation in predicted tumor cells, including:
-   - CCND1 (log2FC: ~1.12)
-   - CDK4 (log2FC: ~0.91)
-   - CDK6 (log2FC: ~0.89)
-   - MYC (log2FC: ~0.97)
-   - MDM2 (log2FC: ~2.95)
-
-2. **Activated Pathways**: The data supports activation of multiple oncogenic pathways:
-   - Cell cycle progression through the CDK4–CDK6–CCND1 axis
-   - Growth signaling via the PI3K–MAPK–EGFR axis
-   - Transcriptional amplification through the MYC signaling axis
-
-3. **Tumor Suppressor Patterns**: Some tumor suppressors show downregulation in tumor cells, including TP53 (log2FC: ~-0.54).
-
-### Pathway Analysis and Network Biology
-
-Network analysis provides deeper insights into tumor biology:
-
-1. **Integrated Signaling**: The visualization of multiple signaling axes demonstrates interconnectedness between oncogenic pathways, with MYC influencing CDK4/6 expression and PI3K–MAPK signaling contributing to overall tumor phenotypes.
-
-2. **Druggable Targets**: Several nodes in the networks represent actionable therapeutic targets with existing drugs, including:
-   - CDK4/6 inhibitors (Palbociclib, Ribociclib, Abemaciclib)
-   - EGFR inhibitors (Erlotinib)
-   - PI3K/AKT pathway inhibitors (Alpelisib, Capivasertib)
-   - MDM2 inhibitors (Milademetan)
-   - BCL2 inhibitors (Venetoclax)
-
-3. **Gene Set Enrichment**: GSEA analysis confirms enrichment of cancer-associated pathways including KEGG and Reactome gene sets related to cell cycle progression, DNA replication, and oncogenic signaling.
-
-## Clinical and Therapeutic Implications
-
-The project findings have several potential clinical applications:
-
-1. **Improved Tumor Cell Detection**: The machine learning approach provides a robust method for identifying tumor cells in heterogeneous tissue samples, potentially enhancing diagnostic accuracy.
-
-2. **Therapeutic Target Prioritization**: The network analysis highlighting highly expressed oncogenes coupled with druggability information can guide therapeutic decision-making.
-
-3. **Biomarker Development**: The identified gene expression patterns could serve as biomarkers for tumor presence, aggressiveness, or treatment response.
-
-4. **Clinical Trial Relevance**: The report notes connections to numerous clinical trials targeting the identified pathways, demonstrating the clinical relevance of the findings.
-
-## Technical Implementation
-
-The project implements a comprehensive computational workflow:
-
-1. **Programming Environment**: Python-based analysis utilizing specialized libraries including:
-   - scanpy for single-cell data analysis
-   - XGBoost for machine learning
-   - SHAP for model interpretation
-   - NetworkX for pathway visualization
-   - matplotlib and seaborn for data visualization
-
-2. **Data Management**: Custom scripts handle dataset downloading, extraction, and organization, ensuring reproducibility.
-
-3. **Visualization Techniques**: Advanced visualization approaches including:
-   - UMAP for dimensionality reduction and cell population visualization
-   - Heatmaps for gene expression patterns
-   - Network diagrams for pathway analysis
-   - Violin plots for distribution comparisons
-
-4. **Statistical Analysis**: Rigorous statistical methods including:
-   - Mann-Whitney U tests for non-parametric comparisons
-   - T-tests with multiple testing correction
-   - Spearman correlation for associating features
-
-## Limitations and Challenges
-
-Despite its strengths, the project faces certain limitations:
-
-1. **Class Imbalance**: The training data shows substantial imbalance between tumor and normal cells, requiring careful threshold calibration.
-
-2. **Cross-dataset Variability**: Technical differences between datasets introduce challenges for model generalization.
-
-3. **Ground Truth Validation**: The reliance on CNV scores as orthogonal validation is useful but not definitive for tumor status.
-
-4. **Causal Relationships**: While the analysis identifies expression patterns, establishing causality requires additional experimental validation.
-
-## Future Directions
-
-The project suggests several avenues for future development:
-
-1. **Model Enhancement**: Incorporating additional features or more sophisticated deep learning approaches could further improve classification performance.
-
-2. **Spatial Context Integration**: Combining the single-cell approach with spatial transcriptomics could provide insights into tumor microenvironment interactions.
-
-3. **Therapeutic Testing**: Experimental validation of the identified drug targets in patient-derived models would strengthen clinical relevance.
-
-4. **Multi-omics Integration**: Incorporating genomic, proteomic, or epigenomic data could provide a more comprehensive tumor cell characterization.
-
-## Conclusion
-
-The Ghost Cell Busters project demonstrates a sophisticated integration of machine learning, bioinformatics, and network biology to address the challenge of tumor cell identification in single-cell data. By developing models that generalize across multiple datasets and connecting these predictions to biologically meaningful patterns of oncogene expression and pathway activation, the project contributes valuable insights to cancer biology. The combination of technical innovation in machine learning with biological interpretation creates a framework that could support both basic research and clinical applications in oncology.
-
-The comprehensive approach—spanning initial model development through cross-validation to in-depth biological interpretation—showcases the power of computational methods for extracting meaningful insights from complex biological datasets. Furthermore, the identification of druggable targets within activated oncogenic networks highlights the potential translational impact of this work for guiding therapeutic development and precision medicine approaches in cancer treatment.
+- Notebooks are organized by topic and stage of the project.
+- Please refer to individual notebook headers for specific details and requirements.
+- For questions or contributions, see the main project README.
