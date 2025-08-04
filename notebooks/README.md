@@ -5,7 +5,7 @@ This folder contains Jupyter notebooks related to the Ghost Cell Busters project
 ## Structure
 
 ### Data Processing and Feature Engineering
-- **01_GSE176078.ipynb** **[01_GSE176078]**(./01_GSE176078.ipynb)  
+- **01_GSE176078.ipynb** **[01_GSE176078.ipynb]**(./01_GSE176078.ipynb)  
    Initial data loading, preprocessing, and feature engineering for the GSE176078 training dataset.
 
 - **04_GSE161529_obs.ipynb** **[04_GSE161529_obs.ipynb]**(./04_GSE161529_obs.ipynb)  
