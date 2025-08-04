@@ -160,7 +160,7 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 
 ## Authors
 
-- Haider Rizvi - [GitHub](https://github.com/hr080100)
+- Haider Rizvi - [GitHub](https://github.com/rizvi-haider)
 - Rajeev Prasad - [GitHub](https://github.com/oliverraj)
 
 ---

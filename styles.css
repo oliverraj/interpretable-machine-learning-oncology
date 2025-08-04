@@ -1,0 +1,168 @@
+body { 
+    font-family: 'Georgia', 'Times New Roman', serif; 
+    line-height: 1.7; 
+    margin: 0; 
+    background: #fdfdfd; 
+    color: #333; 
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+}
+.header {
+    text-align: center;
+    margin-bottom: 3em;
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 2em;
+}
+h1 { 
+    color: #2c3e50; 
+    font-size: 2.5em; 
+    margin-bottom: 0.5em;
+    font-weight: 300;
+}
+.subtitle {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 1em;
+}
+.meta {
+    color: #95a5a6;
+    font-size: 0.9em;
+}
+h2 { 
+    color: #e74c3c; 
+    font-size: 1.8em;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+h3 { 
+    color: #34495e; 
+    font-size: 1.3em;
+    margin-top: 1.5em;
+}
+.highlight {
+    background: linear-gradient(120deg, #f39c12 0%, #f39c12 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0 88%;
+    padding: 2px 0;
+}
+.stats {
+    background: #ecf0f1;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 2em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+.stat-item {
+    text-align: center;
+}
+.stat-number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #e74c3c;
+    display: block;
+}
+.stat-label {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+.methodology {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 1.5em;
+    margin: 2em 0;
+}
+.key-finding {
+    background: #e8f5e8;
+    border-left: 4px solid #27ae60;
+    padding: 1.5em;
+    margin: 1.5em 0;
+    border-radius: 0 8px 8px 0;
+}
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 1em 0;
+}
+.tech-badge {
+    background: #3498db;
+    color: white;
+    padding: 0.3em 0.8em;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.authors {
+    background: #34495e;
+    color: white;
+    padding: 2em;
+    border-radius: 8px;
+    margin-top: 3em;
+    text-align: center;
+}
+.authors h3 {
+    color: #ecf0f1;
+    margin-top: 0;
+}
+.author-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+.author-link:hover {
+    color: #5dade2;
+}
+.cta {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2em;
+    border-radius: 12px;
+    text-align: center;
+    margin: 2em 0;
+}
+.cta h3 {
+    color: white;
+    margin-top: 0;
+}
+.btn {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 0.8em 2em;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin: 0.5em;
+    transition: transform 0.2s;
+}
+.btn:hover {
+    transform: translateY(-2px);
+}
+.timeline {
+    position: relative;
+    margin: 2em 0;
+}
+.timeline-item {
+    background: white;
+    border: 1px solid #ecf0f1;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.timeline-item h4 {
+    color: #e74c3c;
+    margin-top: 0;
+}
+@media (max-width: 768px) {
+    .container { padding: 1em; }
+    h1 { font-size: 2em; }
+    .stats { grid-template-columns: 1fr; }
+}
