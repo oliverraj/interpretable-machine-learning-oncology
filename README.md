@@ -173,7 +173,7 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 3) Managed the GitHub repository setup, including version control and collaborative workflow management.
 4) Provided ongoing support in codebase management and troubleshooting.
 5) Authored these report sections, including Project Statement, Methodology.
-6) Helped in the cross-validation of GSE161529 dataset.
+6) Worked on the cross-validation of GSE161529 and GSE180286 datasets.
 
 ---
 
