@@ -158,6 +158,25 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 
 ---
 
+## Statement of Work
+- Rajeev Prasad:
+1) Led data preprocessing and feature engineering, including calculation of biological scores (CNV, cell cycle, apoptosis, oxphos).
+2) Developed, trained, and optimized the XGBoost machine learning model, applying SMOTE for class balancing and conducting model evaluation.
+3) Performed SHAP-based interpretability analyses and generated key visualizations.
+4) Integrated drug-gene interaction and clinical trial data to prioritize therapeutic targets.
+5) Conducted cross-dataset validation, biological concordance, network and pathway analyses.
+6) Authored these report sections, including Methodology, Results, Discussion, and Future Directions.
+
+- Haider Rizvi:
+1) Set up the Python environment and configured software tools.
+2) Organized, cleaned, and maintained the project notebooks in VSCode for reproducibility and ease of collaboration.
+3) Managed the GitHub repository setup, including version control and collaborative workflow management.
+4) Provided ongoing support in codebase management and troubleshooting.
+5) Authored these report sections, including Project Statement, Methodology.
+6) Helped in the cross-validation of GSE161529 dataset.
+
+---
+
 ## Authors
 
 - Haider Rizvi - [GitHub](https://github.com/rizvi-haider)
