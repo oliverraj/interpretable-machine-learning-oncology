@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Cell Busters - Precision Oncology Poster</title>
+    <link rel="stylesheet" href="poster-styles.css">
+</head>
+<body>
+    <div class="poster">
+        <div class="logo">🧬</div>
+        
+        <div class="header">
+            <h1>Ghost Cell Busters</h1>
+            <div class="subtitle">Precision Oncology through Interpretable Machine Learning</div>
+            <div style="font-size: 20px; margin-top: 10px;">Tumor vs Normal Cell Signatures from Single-Cell Data</div>
+        </div>
+
+        <div class="authors">
+            <h3>Research Team</h3>
+            <p><strong>Haider Rizvi</strong> & <strong>Rajeev Prasad</strong></p>
+            <p>MADS Capstone Team 24 • Summer 2025</p>
+        </div>
+
+        <div class="section">
+            <h2>🎯 Abstract & Objectives</h2>
+            <p>This project analyzes single-cell and spatial transcriptomics data from human breast cancers to distinguish tumor and normal cell populations through comprehensive computational methods. Our workflow integrates data acquisition, feature engineering, copy number variation analysis, machine learning classification, and therapeutic target identification using DGIdb and Open Targets databases.</p>
+            
+            <div class="key-findings">
+                <h4>Key Goals</h4>
+                <ul>
+                    <li><strong>Precision Classification:</strong> Develop interpretable ML models to distinguish tumor vs normal cells</li>
+                    <li><strong>Feature Engineering:</strong> Extract biologically meaningful signatures from scRNA-seq data</li>
+                    <li><strong>Therapeutic Discovery:</strong> Identify clinically relevant gene targets for precision oncology</li>
+                    <li><strong>Cross-Dataset Validation:</strong> Ensure model generalizability across multiple breast cancer cohorts</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Datasets & Methodology</h2>
+            
+            <div class="datasets">
+                <h4>Single-Cell RNA-seq Datasets</h4>
+                <ul>
+                    <li><span class="highlight">GSE176078:</span> Primary training dataset - Breast cancer scRNA-seq</li>
+                    <li><span class="highlight">GSE161529:</span> Validation cohort - Spatial transcriptomics</li>
+                    <li><span class="highlight">GSE180286:</span> Cross-validation dataset - Additional breast cancer samples</li>
+                </ul>
+            </div>
+
+            <div class="methodology-grid">
+                <div class="method-item">
+                    <h4>🧬 Feature Engineering</h4>
+                    <ul>
+                        <li>Cell cycle scoring</li>
+                        <li>Apoptosis signatures</li>
+                        <li>Ribosomal content analysis</li>
+                        <li>OXPHOS pathway activity</li>
+                        <li>CNV burden quantification</li>
+                    </ul>
+                </div>
+                <div class="method-item">
+                    <h4>🤖 Machine Learning</h4>
+                    <ul>
+                        <li>XGBoost classification</li>
+                        <li>SMOTE for class balancing</li>
+                        <li>SHAP for interpretability</li>
+                        <li>Cross-validation</li>
+                        <li>Threshold optimization</li>
+                    </ul>
+                </div>
+                <div class="method-item">
+                    <h4>🔬 CNV Analysis</h4>
+                    <ul>
+                        <li>inferCNV pipeline</li>
+                        <li>Gencode v44 annotations</li>
+                        <li>Chromosomal instability</li>
+                        <li>Copy number scoring</li>
+                    </ul>
+                </div>
+                <div class="method-item">
+                    <h4>💊 Therapeutic Mapping</h4>
+                    <ul>
+                        <li>DGIdb druggability data</li>
+                        <li>Open Targets associations</li>
+                        <li>Pathway enrichment</li>
+                        <li>Clinical trial integration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="workflow">
+                <h4>Analysis Workflow</h4>
+                <div class="workflow-steps">
+                    <div class="workflow-step">Data Loading</div>
+                    <div class="workflow-step">Feature Engineering</div>
+                    <div class="workflow-step">CNV Analysis</div>
+                    <div class="workflow-step">ML Classification</div>
+                    <div class="workflow-step">SHAP Analysis</div>
+                    <div class="workflow-step">Therapeutic Mapping</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📈 Key Results & Performance</h2>
+            
+            <div class="results-grid">
+                <div class="result-item">
+                    <h4>🎯 Classification Performance</h4>
+                    <ul>
+                        <li><span class="metric">AUC: 0.95+</span> Excellent discrimination</li>
+                        <li><span class="metric">Precision: 0.92+</span> High accuracy</li>
+                        <li><span class="metric">Recall: 0.89+</span> Comprehensive detection</li>
+                        <li>Robust cross-dataset validation</li>
+                    </ul>
+                </div>
+                <div class="result-item">
+                    <h4>🧬 Biological Insights</h4>
+                    <ul>
+                        <li>CNV burden as key discriminator</li>
+                        <li>Cell cycle dysregulation in tumors</li>
+                        <li>Metabolic pathway differences</li>
+                        <li>Oncogene expression patterns</li>
+                    </ul>
+                </div>
+                <div class="result-item">
+                    <h4>🔍 Feature Importance</h4>
+                    <ul>
+                        <li><span class="highlight">CNV Score:</span> Top discriminative feature</li>
+                        <li><span class="highlight">Cell Cycle:</span> S/G2M phase enrichment</li>
+                        <li><span class="highlight">OXPHOS:</span> Metabolic reprogramming</li>
+                        <li><span class="highlight">Ribosomal:</span> Translation activity</li>
+                    </ul>
+                </div>
+                <div class="result-item">
+                    <h4>💊 Therapeutic Targets</h4>
+                    <ul>
+                        <li>PI3K/MAPK/EGFR pathway genes</li>
+                        <li>TGF-β/SMAD signaling targets</li>
+                        <li>Cell cycle checkpoint inhibitors</li>
+                        <li>Metabolic vulnerabilities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-findings">
+                <h4>🌟 Major Discoveries</h4>
+                <ul>
+                    <li><strong>Universal Tumor Signatures:</strong> Identified robust features that discriminate tumor cells across multiple datasets</li>
+                    <li><strong>CNV as Biomarker:</strong> Copy number variation burden emerged as the strongest predictor of malignancy</li>
+                    <li><strong>Pathway Networks:</strong> Mapped therapeutic targets within key oncogenic pathways (PI3K, MAPK, EGFR)</li>
+                    <li><strong>Clinical Relevance:</strong> Integrated druggability and clinical trial data for precision medicine applications</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🎛️ Technical Implementation</h2>
+            
+            <h3>🐍 Core Technologies</h3>
+            <ul>
+                <li><strong>Scanpy:</strong> Single-cell analysis framework</li>
+                <li><strong>InferCNVpy:</strong> Copy number variation detection</li>
+                <li><strong>XGBoost:</strong> Gradient boosting classification</li>
+                <li><strong>SHAP:</strong> Model interpretability and feature importance</li>
+                <li><strong>Pandas/NumPy:</strong> Data manipulation and analysis</li>
+                <li><strong>Matplotlib/Seaborn:</strong> Visualization and plotting</li>
+            </ul>
+
+            <h3>📊 Data Processing Pipeline</h3>
+            <ul>
+                <li><strong>Quality Control:</strong> Cell and gene filtering, doublet removal</li>
+                <li><strong>Normalization:</strong> Library size and log transformation</li>
+                <li><strong>Feature Selection:</strong> Highly variable genes identification</li>
+                <li><strong>Dimensionality Reduction:</strong> PCA and UMAP embedding</li>
+                <li><strong>Clustering:</strong> Leiden algorithm for cell type identification</li>
+            </ul>
+
+            <h3>🔬 Validation Strategy</h3>
+            <ul>
+                <li><strong>Cross-Dataset Validation:</strong> Model trained on GSE176078, validated on GSE161529 & GSE180286</li>
+                <li><strong>Stratified Sampling:</strong> Balanced representation across cell types</li>
+                <li><strong>Bootstrap Analysis:</strong> Confidence intervals for performance metrics</li>
+                <li><strong>Biological Validation:</strong> Pathway enrichment and literature concordance</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🔮 Impact & Future Directions</h2>
+            
+            <h3>🏥 Clinical Applications</h3>
+            <ul>
+                <li><strong>Precision Diagnosis:</strong> Automated tumor cell identification in biopsies</li>
+                <li><strong>Therapeutic Stratification:</strong> Patient-specific treatment recommendations</li>
+                <li><strong>Drug Repositioning:</strong> Novel therapeutic applications for existing drugs</li>
+                <li><strong>Biomarker Discovery:</strong> CNV burden as prognostic indicator</li>
+            </ul>
+
+            <h3>🚀 Future Enhancements</h3>
+            <ul>
+                <li><strong>Multi-Modal Integration:</strong> Incorporate spatial, genomic, and proteomic data</li>
+                <li><strong>Real-Time Analysis:</strong> Deploy models for clinical decision support</li>
+                <li><strong>Pan-Cancer Extension:</strong> Generalize approach to other cancer types</li>
+                <li><strong>Temporal Dynamics:</strong> Track tumor evolution and treatment response</li>
+            </ul>
+
+            <h3>🌍 Broader Impact</h3>
+            <ul>
+                <li><strong>Open Science:</strong> All code and methodologies publicly available</li>
+                <li><strong>Reproducible Research:</strong> Comprehensive documentation and tutorials</li>
+                <li><strong>Educational Resource:</strong> Training materials for computational biology</li>
+                <li><strong>Community Building:</strong> Collaboration platform for cancer researchers</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <h3>🔗 Project Resources</h3>
+            <p>
+                <strong>GitHub Repository:</strong> 
+                <a href="https://github.com/mads-capstone-team24-summer-2025/ghost-cell-busters" class="github-link">
+                    github.com/mads-capstone-team24-summer-2025/ghost-cell-busters
+                </a>
+            </p>
+            <p><strong>Technologies:</strong> Python • Scanpy • XGBoost • SHAP • Jupyter • VS Code</p>
+            <p><strong>Contact:</strong> Haider Rizvi (@rizvi-haider) • Rajeev Prasad (@oliverraj)</p>
+        </div>
+    </div>
+</body>
+</html>
