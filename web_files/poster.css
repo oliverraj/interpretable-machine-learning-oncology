@@ -197,9 +197,9 @@ body {
 .workflow-step::after {
     content: '→';
     position: absolute;
-    right: -25px;
+    right: -125px;
     color: #667eea;
-    font-size: 20px;
+    font-size: 100px;
     font-weight: bold;
 }
 

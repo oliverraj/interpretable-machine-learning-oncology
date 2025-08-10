@@ -11,6 +11,5 @@ __pycache__/
 *.mtx
 *.txt
 *.gtf
-*.png
 *.jpg
 *.h5ad
