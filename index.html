@@ -17,12 +17,12 @@
         
         <div class="header">
             <h1>Precision Oncology and Interpretable Machine Learning</h1>
-            <div class="subtitle">Revolutionizing Cancer Detection with AI-Powered Single-Cell Analysis</div>
+            <div class="subtitle">Tumor vs Normal Cell Signatures from Single-Cell Data</div>
             <div class="meta">Haider Rizvi & Rajeev Prasad</div>
         </div>
 
         <p style="font-size: 1.1em; text-align: justify;">
-            In the fight against cancer, identifying tumor cells among healthy tissue remains one of the most critical challenges in modern oncology. Our groundbreaking project, <span class="highlight">"Ghost Cell Busters,"</span> leverages cutting-edge machine learning and single-cell RNA sequencing to revolutionize how we detect and understand cancer at the cellular level.
+            In the fight against cancer, identifying tumor cells among healthy tissue remains one of the most critical challenges in modern oncology. Our groundbreaking project, <span class="highlight">"Precision Oncology and Interpretable Machine Learning"</span> leverages machine learning and single-cell RNA sequencing to revolutionise how we detect and understand cancer at the cellular level.
         </p>
 
         <div class="stats">
@@ -31,7 +31,7 @@
                 <span class="stat-label">Cancer Datasets</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">95%</span>
+                <span class="stat-number">89%</span>
                 <span class="stat-label">Model Accuracy</span>
             </div>
             <div class="stat-item">
@@ -39,18 +39,18 @@
                 <span class="stat-label">Oncogenes Analyzed</span>
             </div>
             <div class="stat-item">
-                <span class="stat-number">100K+</span>
+                <span class="stat-number">300K+</span>
                 <span class="stat-label">Single Cells</span>
             </div>
         </div>
 
         <h2>The Challenge: Finding Needles in a Haystack</h2>
         <p>
-            Cancer diagnosis traditionally relies on tissue morphology and bulk molecular profiling, but these methods often miss the heterogeneity that drives treatment resistance. Single-cell RNA sequencing has opened new frontiers, but distinguishing tumor cells from normal cells in complex tissue samples remains computationally challenging.
+            Cancer therapeutics traditionally rely on broad population-based treatment protocols and bulk tumor profiling, but these approaches often fail to account for the cellular heterogeneity that drives therapeutic resistance and treatment failure. Single-cell RNA sequencing has opened new frontiers, but identifying the specific cellular populations that respond to or resist targeted therapies remains computationally challenging.
         </p>
 
         <div class="key-finding">
-            <strong>Key Insight:</strong> Our machine learning models successfully identified tumor cells with 95% accuracy by analyzing expression patterns of oncogenes, cell cycle markers, and genomic instability signatures across three independent breast cancer datasets.
+            <strong>Key Insight:</strong> Our machine learning models successfully identified tumor cells with 89% accuracy by analyzing expression patterns of oncogenes, cell cycle markers, and genomic instability signatures (copy number variation-CNV scores) across three independent breast cancer datasets.
         </div>
 
         <h2>Our Innovative Approach</h2>
@@ -58,42 +58,42 @@
         <div class="methodology">
             <h3>Multi-Dataset Validation Strategy</h3>
             <p>
-                We analyzed three comprehensive cancer datasets (GSE176078, GSE161529, GSE180286) to ensure our models generalize across different patient populations and experimental conditions. This cross-validation approach is crucial for developing clinically applicable tools.
+                We analyzed three comprehensive cancer datasets (GSE176078, GSE161529, GSE180286) to ensure our models generalise across different patient populations and experimental conditions. This cross-validation approach is crucial for developing clinically applicable tools.
             </p>
         </div>
 
         <div class="timeline">
             <div class="timeline-item">
                 <h4>Phase 1: Data Engineering & Feature Discovery</h4>
-                <p>We engineered novel cellular features including CNV scores, cell cycle signatures, apoptosis markers, and oncogene activation patterns to create comprehensive cellular fingerprints.</p>
+                <p>We engineered novel cellular features including CNV scores, cell cycle signatures, apoptosis markers, ribosomal percentage count, RNA count, protooncogene score and oncogene activation patterns to create comprehensive cellular fingerprints.</p>
             </div>
             
             <div class="timeline-item">
                 <h4>Phase 2: Machine Learning Model Development</h4>
-                <p>Using XGBoost and advanced ensemble methods, we developed interpretable models that not only classify cells but explain the biological reasoning behind each prediction.</p>
+                <p>Using XGBoost we developed interpretable machine learning models that not only classify cells but explain the biological reasoning behind each prediction. Performed threshold analysis to find the optimal value for the model.</p>
             </div>
             
             <div class="timeline-item">
                 <h4>Phase 3: Biological Validation & Pathway Analysis</h4>
-                <p>We validated our predictions using orthogonal measures like genomic instability and performed comprehensive pathway analysis to identify therapeutic targets.</p>
+                <p>We validated our predictions using orthogonal measures like genomic instability and performed comprehensive pathway analysis to identify therapeutic targets. Our pathway analysis leveraged - <strong>PI3K–MAPK–EGFR, CDK4–CDK6–CCND1</strong> - to map dysregulated genes to biological processes and signaling networks, revealing oncogenic dependencies and potential intervention points across multiple cancer-related pathways.</p>
             </div>
             
             <div class="timeline-item">
                 <h4>Phase 4: Clinical Translation & Drug Target Discovery</h4>
-                <p>Integration with drug databases revealed actionable therapeutic targets, bridging the gap between computational discovery and clinical application.</p>
+                <p>Integration with drug databases - Drug Gene Interaction Database (DGIdb), Open Targets Databases etc. revealed actionable therapeutic targets, bridging the gap between computational discovery and clinical application.</p>
             </div>
         </div>
 
         <h2>Breakthrough Discoveries</h2>
 
-        <h3>🎯 Precision Tumor Detection</h3>
-        <p>
-            Our models achieved remarkable accuracy by focusing on key oncogenes including <strong>MYC, CCND1, ERBB2, and CDK4</strong>. These genes showed consistent upregulation in predicted tumor cells across all datasets, providing robust biomarkers for cancer detection.
-        </p>
-
         <h3>🧬 Genomic Instability as Validation</h3>
         <p>
             A critical breakthrough was using CNV (Copy Number Variation) scores as independent validation. Predicted tumor cells consistently showed higher genomic instability, confirming our models were capturing genuine cancer hallmarks rather than technical artifacts.
+        </p>
+
+        <h3>🎯 Precision Tumor Detection</h3>
+        <p>
+            Our models achieved remarkable accuracy by focusing on key oncogenes including <strong>MYC, CCND1, ERBB2, CDK4</strong> etc. These genes showed consistent upregulation in predicted tumor cells across all datasets, providing robust biomarkers for cancer detection.
         </p>
 
         <h3>🎨 Network Biology Insights</h3>
@@ -101,9 +101,21 @@
             We visualized complex oncogenic networks including the PI3K–MAPK–EGFR axis, CDK4–CDK6–CCND1 pathway, and MYC signaling cascade. These network analyses revealed interconnected pathways driving tumor progression and identified multiple intervention points.
         </p>
 
-        <div class="key-finding">
-            <strong>Clinical Impact:</strong> Our analysis identified several FDA-approved drugs (Palbociclib, Erlotinib, Venetoclax) that target highly expressed oncogenes in our predicted tumor cells, suggesting immediate clinical applications.
-        </div>
+        <h3>💻 Clinical Impact:</h3>
+        <p>
+            Our analysis identified several drugs that target highly expressed oncogenes in our predicted tumor cells, suggesting immediate clinical applications.
+            <div class="clinical-impact-container">
+                <div class="clinical-image">
+                    <img src="web_files/drugs.png" alt="Drug targets visualization showing oncogene interactions" class="impact-image">
+                </div>
+                <div class="clinical-text">
+                    <p><strong>1)</strong> FDA-approved drugs (Palbociclib-CDK4, CDK6; Erlotinib - EGFR; Venetoclax - BCL2)</p>
+                    <p><strong>2)</strong> Therapeutic Expansion drugs (Abemaciclib, Osimertinib)</p>
+                    <p><strong>3)</strong> Emerging Clinical drugs (Tirbaninulin)</p>
+                    <p><strong>4)</strong> Underexplored drugs (Futibatinib)</p>
+                </div>
+            </div>
+        </p>
 
         <h2>Technical Innovation</h2>
 
@@ -120,7 +132,7 @@
         </div>
 
         <p>
-            Our computational pipeline integrates state-of-the-art bioinformatics tools with advanced machine learning frameworks. The use of SHAP (SHapley Additive exPlanations) for model interpretation ensures that our predictions are not just accurate but also biologically meaningful and clinically interpretable.
+            Our computational pipeline integrates bioinformatics tools with advanced machine learning frameworks. The use of SHAP (SHapley Additive exPlanations) for model interpretation ensures that our predictions are not just accurate but also biologically meaningful and clinically interpretable.
         </p>
 
         <h2>Future Implications</h2>
@@ -134,13 +146,12 @@
                 <li><strong>Clinical Validation:</strong> Prospective studies in clinical cohorts</li>
                 <li><strong>Multi-cancer Extension:</strong> Adaptation to other cancer types</li>
                 <li><strong>Spatial Integration:</strong> Combining with spatial transcriptomics</li>
-                <li><strong>Real-time Deployment:</strong> Development of clinical-grade software tools</li>
             </ul>
         </div>
 
         <div class="cta">
             <h3>Explore Our Research</h3>
-            <p>Dive into our comprehensive analysis, examine our code, and discover how AI is transforming cancer detection.</p>
+            <p>Dive into our comprehensive analysis, examine our code, and discover cancer detection.</p>
             <a href="https://github.com/mads-capstone-team24-summer-2025/ghost-cell-busters" class="btn" target="_blank">View on GitHub</a>
             <a href="notebooks/" class="btn">Browse Notebooks</a>
             <a href="web_files/poster.html" class="btn">View Research Poster</a>

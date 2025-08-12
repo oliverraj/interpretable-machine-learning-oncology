@@ -27,15 +27,15 @@
 
         <div class="section">
             <h2>🎯 Abstract & Objectives</h2>
-            <p>This project analyzes single-cell and spatial transcriptomics data from human breast cancers to distinguish tumor and normal cell populations through comprehensive computational methods. Our workflow integrates data acquisition, feature engineering, copy number variation analysis, machine learning classification, and therapeutic target identification using DGIdb and Open Targets databases.</p>
+            <p>This project analyzes single-cell transcriptomics data from human breast cancers to distinguish tumor and normal cell populations through comprehensive computational methods. Our workflow integrates data acquisition, feature engineering,oxphos, protooncogene categorisation, copy number variation analysis, machine learning classification, and therapeutic target identification using DGIdb, Open Targets databases and Clinical trial datasets.</p>
             
             <div class="key-findings">
                 <h4>Key Goals</h4>
                 <ul>
-                    <li><strong>Precision Classification:</strong> Develop interpretable ML models to distinguish tumor vs normal cells</li>
                     <li><strong>Feature Engineering:</strong> Extract biologically meaningful signatures from scRNA-seq data</li>
+                    <li><strong>Machine Learning Model:</strong> Develop interpretable ML models to distinguish tumor vs normal cells</li>
+                    <li><strong>Cross-Dataset Validation:</strong> Ensure model generalizability across multiple breast cancer datasets</li>
                     <li><strong>Therapeutic Discovery:</strong> Identify clinically relevant gene targets for precision oncology</li>
-                    <li><strong>Cross-Dataset Validation:</strong> Ensure model generalizability across multiple breast cancer cohorts</li>
                 </ul>
             </div>
 
@@ -55,8 +55,8 @@
                 <h4>Single-Cell RNA-seq Datasets</h4>
                 <ul>
                     <li><span class="highlight">GSE176078:</span> Primary training dataset - Breast cancer scRNA-seq</li>
-                    <li><span class="highlight">GSE161529:</span> Validation cohort - Spatial transcriptomics</li>
-                    <li><span class="highlight">GSE180286:</span> Cross-validation dataset - Additional breast cancer samples</li>
+                    <li><span class="highlight">GSE161529:</span> Cross-Validation dataset - Additional breast cancer samples</li>
+                    <li><span class="highlight">GSE180286:</span> Cross-Validation dataset - Additional breast cancer samples</li>
                 </ul>
             </div>
 
@@ -75,18 +75,18 @@
                     <h4>🤖 Machine Learning</h4>
                     <ul>
                         <li>XGBoost classification</li>
+                        <li>Threshold optimization</li>
+                        <li>Cross-validation</li>
                         <li>SMOTE for class balancing</li>
                         <li>SHAP for interpretability</li>
-                        <li>Cross-validation</li>
-                        <li>Threshold optimization</li>
                     </ul>
                 </div>
                 <div class="method-item">
                     <h4>🔬 CNV Analysis</h4>
                     <ul>
+                        <li>Chromosomal instability</li>
                         <li>inferCNV pipeline</li>
                         <li>Gencode v44 annotations</li>
-                        <li>Chromosomal instability</li>
                         <li>Copy number scoring</li>
                     </ul>
                 </div>
@@ -157,9 +157,9 @@
                     <h4>💊 Therapeutic Targets</h4>
                     <ul>
                         <li>PI3K/MAPK/EGFR pathway genes</li>
-                        <li>TGF-β/SMAD signaling targets</li>
-                        <li>Cell cycle checkpoint inhibitors</li>
-                        <li>Metabolic vulnerabilities</li>
+                        <li>CDK4–CDK6–CCND1</li>
+                        <li>Emerging and Underexplored targets</li>
+                        <li>DGIdb status, Open Target Score and breast cancer support categorisation</li>
                     </ul>
                 </div>
             </div>
@@ -198,19 +198,18 @@
 
             <h3>📊 Data Processing Pipeline</h3>
             <ul>
-                <li><strong>Quality Control:</strong> Cell and gene filtering, doublet removal</li>
+                <li><strong>Quality Control:</strong> Cell and gene filtering</li>
                 <li><strong>Normalization:</strong> Library size and log transformation</li>
                 <li><strong>Feature Selection:</strong> Highly variable genes identification</li>
                 <li><strong>Dimensionality Reduction:</strong> PCA and UMAP embedding</li>
-                <li><strong>Clustering:</strong> Leiden algorithm for cell type identification</li>
             </ul>
 
             <h3>🔬 Validation Strategy</h3>
             <ul>
                 <li><strong>Cross-Dataset Validation:</strong> Model trained on GSE176078, validated on GSE161529 & GSE180286</li>
-                <li><strong>Stratified Sampling:</strong> Balanced representation across cell types</li>
-                <li><strong>Bootstrap Analysis:</strong> Confidence intervals for performance metrics</li>
-                <li><strong>Biological Validation:</strong> Pathway enrichment and literature concordance</li>
+                <li><strong>Threshold Optimization:</strong> Fine-tuning model parameters for improved performance</li>
+                <li><strong>SHAP Analysis:</strong> Feature importance and model interpretability</li>
+                <li><strong>Biological Concordance:</strong> Pathway identification and literature concordance</li>
             </ul>
         </div>
 
@@ -228,26 +227,27 @@
             
             <h3>🏥 Clinical Applications</h3>
             <ul>
-                <li><strong>Precision Diagnosis:</strong> Automated tumor cell identification in biopsies</li>
                 <li><strong>Therapeutic Stratification:</strong> Patient-specific treatment recommendations</li>
                 <li><strong>Drug Repositioning:</strong> Novel therapeutic applications for existing drugs</li>
                 <li><strong>Biomarker Discovery:</strong> CNV burden as prognostic indicator</li>
             </ul>
+
+            <br>
 
             <h3>🚀 Future Enhancements</h3>
             <ul>
                 <li><strong>Multi-Modal Integration:</strong> Incorporate spatial, genomic, and proteomic data</li>
                 <li><strong>Real-Time Analysis:</strong> Deploy models for clinical decision support</li>
                 <li><strong>Pan-Cancer Extension:</strong> Generalize approach to other cancer types</li>
-                <li><strong>Temporal Dynamics:</strong> Track tumor evolution and treatment response</li>
             </ul>
 
-            <h3>🌍 Broader Impact</h3>
+            <br>
+
+            <h3>‼️ Potential Challenges:</h3>
             <ul>
-                <li><strong>Open Science:</strong> All code and methodologies publicly available</li>
-                <li><strong>Reproducible Research:</strong> Comprehensive documentation and tutorials</li>
-                <li><strong>Educational Resource:</strong> Training materials for computational biology</li>
-                <li><strong>Community Building:</strong> Collaboration platform for cancer researchers</li>
+                <li><strong>Data Privacy:</strong> Ensuring patient confidentiality and data security</li>
+                <li><strong>Model Generalizability:</strong> Addressing biases in training data</li>
+                <li><strong>Clinical Validation:</strong> Rigorous testing in real-world settings</li>
             </ul>
         </div>
 
