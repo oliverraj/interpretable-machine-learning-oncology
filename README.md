@@ -185,3 +185,5 @@ pip install scanpy pandas numpy matplotlib seaborn scikit-learn gseapy mygene in
 ---
 
 **Note:** The `assets/` folder containing raw and processed data is **not included** in this repository due to size and LFS limitations.
+
+_Last updated by Rajeev Prasad_
